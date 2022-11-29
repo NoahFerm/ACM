@@ -9,7 +9,7 @@ namespace ACM.BL
     public class Order
     {
 
-        public Order()
+        public Order() : this(0)
         {
 
         }
@@ -17,22 +17,14 @@ namespace ACM.BL
         public Order(int orderId)
         {
             OrderID = orderId;
+            OrderItems = new List<OrderItem>();
         }
 
+        public int CustomerID { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
         public int OrderID { get; private set; }
-        
-        public Order Retrieve(int orderId)
-        {
-            //Code
-            return new Order();
-        }
-
-        public bool Save()
-        {
-            //Code
-            return true;
-        }
+        public List<OrderItem> OrderItems { get; set; }
+        public int ShippingAddressID { get; set; }
 
         public bool Validate()
         {

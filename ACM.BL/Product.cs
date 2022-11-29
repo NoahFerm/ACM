@@ -22,19 +22,6 @@ namespace ACM.BL
         public string ProductDescription { get; set; }
         public int ProductID { get; private set; }
         public string ProductName { get; set; }
-        
-        public Product Retrieve(int productId)
-        {
-            //Code
-            return new Product();
-        }
-
-        public bool Save()
-        {
-            //Code
-            return true;
-        }
-
         public bool Validate()
         {
             var isValid = true;
